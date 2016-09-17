@@ -1,0 +1,11 @@
+<ul>
+    {{#each model as |user|}}
+    <li>
+        <span>{{user.id}}</span>
+        <span>{{user.name}}</span>
+        <span>{{user.age}}</span>
+    </li>
+    {{else}}
+    <li>暂无数据</li>
+    {{/each}}
+</ul>

@@ -9,6 +9,7 @@ Router.map(function() {
     this.route('demos', {}, function() {
         this.route('demo1', {});
         this.route('demo2', {});
+        this.route('demo3', {});
     });
 });
 

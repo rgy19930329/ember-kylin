@@ -6,14 +6,11 @@ module.exports = function(environment) {
     podModulePrefix: 'ember-kylin/business',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      },
-      EXTEND_PROTOTYPES: {
-        Date: false,
       }
     },
 

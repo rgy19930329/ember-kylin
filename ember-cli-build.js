@@ -22,7 +22,8 @@ module.exports = function(defaults) {
 
   app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-  
+
+  app.import('vendor/lodash/lodash.min.js');
   app.import('vendor/global.js')
 
   return app.toTree();

@@ -11,7 +11,7 @@ export default Ember.Route.extend({
         users.push({'id': 'u003', 'name': '赵铁柱', 'age': 24});
         return users;
         // return Ember.RSVP.hash({
-        //     users: users
+        //     users: users,
         // });
     },
 

@@ -1,7 +1,7 @@
-
 <ul>
     {{#each model as |user index|}}
     <li>
+        <span>{{add-one index}}</span>
         <span>{{user.id}}</span>
         <span>{{user.name}}</span>
         <span>{{user.age}}</span>
@@ -10,5 +10,3 @@
     <li>暂无数据</li>
     {{/each}}
 </ul>
-
-<button {{action "press" 100}} class="btn btn-default">press me</button>

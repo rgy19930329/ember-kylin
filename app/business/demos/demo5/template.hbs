@@ -1,0 +1,24 @@
+
+<ul>
+    {{#each model.users as |user index|}}
+    <li>
+        <span>{{add-one index}}</span>
+        <span>{{user.id}}</span>
+        <span>{{user.name}}</span>
+        <span>{{user.age}}</span>
+        <span><button {{action "del" user}} class="btn btn-default btn-sm">-</button></span>
+    </li>
+    {{else}}
+    <li>暂无数据</li>
+    {{/each}}
+</ul>
+
+<div class="">
+    <label>id:</label>
+    {{input type="text" value=model.newUser.id}}
+    <label>name:</label>
+    {{input type="text" value=model.newUser.name}}
+    <label>age:</label>
+    {{input type="text" value=model.newUser.age}}
+    <button {{action "add" model.newUser}} class="btn btn-default">add</button>
+</div>

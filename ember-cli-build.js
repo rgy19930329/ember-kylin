@@ -5,6 +5,22 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+
+    babel: {
+      comments: false,
+      optional: ['es7.decorators'],
+      includePolyfill: true,
+      only: [
+        './components/*.js',
+        './business/**/*.js',
+        './mixins/*.js',
+        './models/*.js',
+        './transitions/*.js',
+        './helpers/*.js',
+        './*.js'
+      ]
+    }
+    
   });
 
   // Use `app.import` to add additional libraries to the generated

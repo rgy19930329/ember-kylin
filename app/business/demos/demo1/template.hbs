@@ -1,7 +1,8 @@
+{{!-- 模板与路由说明 --}}
 <ul>
     {{#each model as |user index|}}
     <li>
-        <span>{{index}}</span>
+        {{#if (is-eq index 1)}}<span>{{index}}</span>{{/if}}
         <span>{{user.id}}</span>
         <span>{{user.name}}</span>
         <span>{{user.age}}</span>
@@ -10,3 +11,5 @@
     <li>暂无数据</li>
     {{/each}}
 </ul>
+
+{{#link-to "demos.demo2"}}demo2{{/link-to}}

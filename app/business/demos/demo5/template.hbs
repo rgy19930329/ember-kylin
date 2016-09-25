@@ -1,24 +1,9 @@
+{{!-- 计算属性-demo演示-first last name --}}
 
-<ul>
-    {{#each model.users as |user index|}}
-    <li>
-        <span>{{add-one index}}</span>
-        <span>{{user.id}}</span>
-        <span>{{user.name}}</span>
-        <span>{{user.age}}</span>
-        <span><button {{action "del" user}} class="btn btn-default btn-sm">-</button></span>
-    </li>
-    {{else}}
-    <li>暂无数据</li>
-    {{/each}}
-</ul>
-
-<div class="">
-    <label>id:</label>
-    {{input type="text" value=model.newUser.id}}
-    <label>name:</label>
-    {{input type="text" value=model.newUser.name}}
-    <label>age:</label>
-    {{input type="text" value=model.newUser.age}}
-    <button {{action "add" model.newUser}} class="btn btn-default">add</button>
+<div>uid: {{model.uid}}</div>
+<div>
+    {{input type="text" value=model.firstName class="form-control inline-block"}}
+    {{input type="text" value=model.lastName class="form-control inline-block"}}
 </div>
+<div>age: {{model.age}}</div>
+<div>个人信息：{{showInfo}}</div>

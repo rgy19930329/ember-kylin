@@ -1,11 +1,18 @@
 /*jshint node:true*/
 /* global require, module */
+var path = require('path');
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var env = process.env.EMBER_ENV;
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
-
+    lessOptions: {
+      paths: [
+        'app/styles/app'
+      ],
+      sourceMap: false
+    },
     babel: {
       comments: false,
       optional: ['es7.decorators'],
@@ -19,9 +26,27 @@ module.exports = function(defaults) {
         './helpers/*.js',
         './*.js'
       ]
-    }
-    
+    },
+    'ember-cli-qunit': { // turn off jshint
+      useLintTree: false
+    },
+    eslint: {
+      enabled: env != 'production',
+      testGenerator: eslintTestGenerator
+    },
+
   });
+
+  // Qunit test generator
+  function eslintTestGenerator(relativePath, errors) {
+    var pass = !errors || errors.length === 0;
+    return "import { module, test } from 'qunit';\n" +
+      "module('ESLint - " + path.dirname(relativePath) + "');\n" +
+      "test('" + relativePath + " should pass ESLint', function(assert) {\n" +
+      "  assert.ok(" + pass + ", '" + relativePath + " should pass ESLint." +
+      jsStringEscape("\n" + render(errors)) + "');\n" +
+     "});\n";
+  }
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

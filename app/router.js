@@ -15,6 +15,10 @@ Router.map(function() {
         this.route('demo6', {});
         this.route('demo7', {});
     });
+    this.route('learn', {}, function() {
+        this.route('demo1', {});
+        this.route('demo2', {});
+    });
 });
 
 export default Router;

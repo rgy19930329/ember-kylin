@@ -3,6 +3,7 @@ import { on } from 'ember-computed-decorators';
 
 export default Ember.Component.extend({
     componentName: 'ember-routable-components 的使用',
+    remodal: Ember.inject.service(),
     list: [],
 
     @on('init')
@@ -14,4 +15,23 @@ export default Ember.Component.extend({
             }
         });
     },
+
+    didInsertElement() {
+        $('.J-press-me').on('click', function() {
+            alert('press me');
+        });
+        $('tbody').on('click', 'tr', function() {
+            var $tar = $(this);
+            console.log($tar.index());
+        });
+    },
+
+    actions: {
+        press(item) {
+            this.set('item', item);
+            this.get('remodal').open('learn-test-modal').then((modal) => {
+                this.set('modal', modal);
+            });
+        }
+    }
 });

@@ -1,0 +1,22 @@
+<!-- test模态框 -->
+{{#ember-remodal forService=true name="learn-test-modal" modalClasses="kylin-remodal"}}
+  <h4 class="remodal-title">众筹项目审核详情</h4>
+  <table class="table">
+      <thead>
+          <tr>
+              <th>审核人员</th>
+              <th>审核说明</th>
+              <th>审核描述</th>
+              <th>审核时间</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="text-left">
+              <td>{{item.auditMan}}</td>
+              <td>{{item.auditMark}}</td>
+              <td>{{item.auditStatusDesc}}</td>
+              <td>{{item.auditTime}}</td>
+          </tr>
+      </tbody>
+  </table>
+{{/ember-remodal}}

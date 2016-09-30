@@ -1,22 +1,32 @@
 <h2>标题：{{componentName}}</h2>
+<h3>测试：1. ember-remodal</h3>
+<h3>测试：2. liquid-fire</h3>
+<h3>测试：3. 事件代理</h3>
 
-<table>
-    <thead>
-        <tr>
-            <th>审核人员</th>
-            <th>审核说明</th>
-            <th>审核描述</th>
-            <th>审核时间</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each list as |item|}}
-        <tr>
-            <td>{{item.auditMan}}</td>
-            <td>{{item.auditMark}}</td>
-            <td>{{item.auditStatusDesc}}</td>
-            <td>{{item.auditTime}}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<div class="box">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>审核人员</th>
+                <th>审核说明</th>
+                <th>审核描述</th>
+                <th>审核时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list as |item|}}
+            <tr>
+                <td>{{item.auditMan}}</td>
+                <td>{{item.auditMark}}</td>
+                <td>{{item.auditStatusDesc}}</td>
+                <td>{{item.auditTime}}</td>
+                <td><button {{action "press" item}} class="btn btn-default btn-sm">press</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <td><button class="btn btn-default J-press-me">press me</button></td>
+</div>
+{{learn/demo2/test-modal item=item}}

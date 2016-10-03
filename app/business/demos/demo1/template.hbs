@@ -2,7 +2,7 @@
 <ul>
     {{#each model as |user index|}}
     <li>
-        {{#if (is-eq index 1)}}<span>{{index}}</span>{{/if}}
+        {{#if (is-eq index 0)}}<span>{{index}}</span>{{/if}}
         <span>{{user.id}}</span>
         <span>{{user.name}}</span>
         <span>{{user.age}}</span>

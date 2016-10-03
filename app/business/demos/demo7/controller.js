@@ -4,8 +4,7 @@ export default Ember.Controller.extend({
 	actions: {
 		add(user) {
 			let users = this.get('model.users');
-            let cuser = _.cloneDeep(user);
-            users.pushObject(cuser);
+            users.pushObject(user);
             user = {
                 id: '',
                 name: '',

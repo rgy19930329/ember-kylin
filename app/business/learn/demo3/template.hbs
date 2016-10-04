@@ -1,1 +1,7 @@
 <h2>测试：测试 自定义组件 my-radios</h2>
+{{my-radios
+    content=list
+    value=category.val
+}}
+
+<button {{action "submit" category}} class="btn btn-default">submit</button>

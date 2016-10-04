@@ -23,3 +23,24 @@ thead {
         margin-top: 0;
     }
 }
+
+/*---------my-radios--------*/
+
+.my-radios {
+    font-size: 0;
+    input {
+        display: none;
+    }
+    span {
+        background: @base-color;
+        color: #fff;
+        display: inline-block;
+        font-size: 20px;
+        padding: 3px 10px;
+        border-radius: 3px;
+        margin: 0 2px;
+    }
+    input:checked + span {
+        background: #f60;
+    }
+}

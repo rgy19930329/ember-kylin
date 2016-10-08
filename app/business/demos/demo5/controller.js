@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
 			lastName = this.get('model.lastName'),
 			uid = this.get('model.uid'),
 			age = this.get('model.age');
-		return firstName + ' ' + lastName + '(uid: ' + uid + 'age: ' + age + ')';
+		return firstName + ' ' + lastName + '(uid: ' + uid + ' ,age: ' + age + ')';
 	}
 
 });

@@ -4,13 +4,6 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
-    // lessOptions: {
-    //   paths: [
-    //     'app/styles/app',
-    //   ],
-    //   sourceMap: false
-    // },
     babel: {
       comments: false,
       optional: ['es7.decorators'],

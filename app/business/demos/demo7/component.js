@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Component.extend({
 	actions: {
 		add(user) {
 			let users = this.get('model.users');

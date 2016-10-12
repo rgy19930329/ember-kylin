@@ -3,39 +3,35 @@ import computed from 'ember-computed-decorators';
 
 export default Ember.Component.extend({
 
-	@computed('newUser.id')
-	listenNewUser() {
-		let newUser = this.get('newUser');
-		console.log(newUser);
+	users: [
+		{"id": "u001", "name": "王尼玛", "age": 23},
+		{"id": "u002", "name": "张全蛋", "age": 22},
+		{"id": "u003", "name": "赵铁柱", "age": 24}
+	],
+
+	newUser: {
+		id: '',
+		name: '',
+		age: ''
 	},
 
-	newUser: {},
-
 	actions: {
-		add(user) {
-			// console.log(user);
-			let users = this.get('model.users');
-            let cuser = _.cloneDeep(user);
-            users.pushObject(cuser);
+		add() {
+			// let user = this.get('newUser');
+			console.log(this.get('newUser'));
+			// let users = this.get('users');
+            // let cuser = _.cloneDeep(user);
+            // users.pushObject(cuser);
             // user = {
             //     id: '',
             //     name: '',
             //     age: ''
             // };
-            // this.set('model.newUser', user);
+            // this.set('newUser', user);
 		},
         del(user) {
             let users = this.get('model.users');
             users.removeObject(user);
-        },
-		press() {
-			let users = this.get('model.users');
-            let cuser = {
-                id: '11',
-                name: '22',
-                age: '333'
-            };
-			users.pushObject(cuser);
-		}
+        }
 	}
 });

@@ -1,6 +1,6 @@
 {{!-- 小demo --}}
 <ul>
-    {{#each model.users as |user index|}}
+    {{#each users as |user index|}}
     <li>
         <span>{{add-one index}}</span>
         <span>{{user.id}}</span>
@@ -13,14 +13,12 @@
     {{/each}}
 </ul>
 
-<div>{{listenNewUser}}
+<div>
     <label>id:</label>
     {{input type="text" value=newUser.id}}
     <label>name:</label>
     {{input type="text" value=newUser.name}}
     <label>age:</label>
     {{input type="text" value=newUser.age}}
-    <button {{action "add" newUser}} class="btn btn-default">add</button>
+    <button {{action "add"}} class="btn btn-default">add</button>
 </div>
-
-<button class="btn btn-default" {{action "press"}}>press</button>

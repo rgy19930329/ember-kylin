@@ -12,3 +12,5 @@ ember.js相关
 [package.json 下 "ember-component-css": "0.2.0-beta.6"]
 
 [package.json 下 "ember-routable-components-shim": "0.1.0"]
+
+[bower.json 下 "ember": "~2.8.0"]

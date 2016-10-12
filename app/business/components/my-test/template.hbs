@@ -1,2 +1,27 @@
-{{input type="text" value=(mut inputValue)}}
+{{input type="text" value=(readonly inputValue)}}
 {{inputValue}}
+<br>
+{{input type="text" value=inputValue1}}
+{{inputValue1}}
+<br>
+{{input type="text" value=(mut inputValue2)}}
+{{inputValue2}}
+
+<h2>总结：</h2>
+<h4>
+    2.9 以前 默认的是双向绑定
+</h4>
+<pre>value=inputValue
+或：
+value=(mut inputValue)
+解除双向绑定：
+value=(readonly inputValue)
+</pre>
+
+<h4>
+    2.9 及以后 默认的是单向绑定
+</h4>
+<pre>value=inputValue
+进行双向绑定：
+value=(mut inputValue2)
+</pre>

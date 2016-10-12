@@ -1,6 +1,6 @@
 {{!-- 小demo --}}
 <ul>
-    {{#each users as |user index|}}
+    {{#each model.users as |user index|}}
     <li>
         <span>{{add-one index}}</span>
         <span>{{user.id}}</span>
@@ -15,10 +15,10 @@
 
 <div>
     <label>id:</label>
-    {{input type="text" value=newUser.id}}
+    {{input type="text" value=model.newUser.id}}
     <label>name:</label>
-    {{input type="text" value=newUser.name}}
+    {{input type="text" value=model.newUser.name}}
     <label>age:</label>
-    {{input type="text" value=newUser.age}}
-    <button {{action "add"}} class="btn btn-default">add</button>
+    {{input type="text" value=model.newUser.age}}
+    <button {{action "add" model.newUser}} class="btn btn-default">add</button>
 </div>

@@ -1,11 +1,11 @@
 {{#each content as |item index|}}
 <label>
     {{#if (is-or (is-eq item.val value) (is-eq item.name name) )}}
-    {{input type="radio" value=item.val name=inputName class="" checked="checked"}}
-    <span>{{item.name}}</span>
+        <input type="radio" value={{item.val}} name={{inputName}} checked="checked">
+        <span>{{item.name}}</span>
     {{else}}
-    {{input type="radio" value=item.val name=inputName class=""}}
-    <span {{action "select" index}}>{{item.name}}</span>
+        {{input type="radio" value=item.val name=inputName}}
+        <span {{action "select" index}}>{{item.name}}</span>
     {{/if}}
 </label>
 {{/each}}

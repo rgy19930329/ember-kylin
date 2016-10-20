@@ -3,4 +3,7 @@
 {{my-radios
     content=model.list
     value=model.curr.val
+    name=model.curr.name
 }}
+
+<button {{action "press" model.curr}} class="btn btn-default">press</button>

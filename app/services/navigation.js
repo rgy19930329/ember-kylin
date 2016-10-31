@@ -12,8 +12,6 @@ export default Service.extend({
   }),
 
   show(context) {
-      console.log(this);
-      console.log(context);
     set(context || this, 'isShown', true);
   },
 

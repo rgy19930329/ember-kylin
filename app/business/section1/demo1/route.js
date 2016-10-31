@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    routeName: 'demos.demo9',
+    routeName: 'section1.demo1',
     listUrl: '',
 
     list: [

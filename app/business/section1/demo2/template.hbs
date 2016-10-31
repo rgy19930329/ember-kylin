@@ -1,1 +1,15 @@
-<h3>demo2 测试 自定义组件 的新思路</h3>
+<h3 class="page-title-s1">demo2 测试 自定义组件 的新思路 / 实现 user-select / demo来自 <a href="https://github.com/very-geek/ember-sandbox/tree/003/final">ember-sandbox 003</a></h3>
+
+<section class="section-box">
+    {{#user-select model as |user api|}}
+        {{user.header api.currentUser}}
+        <div class="oh section-box-main">
+            <div class="fl">
+                {{user.list api}}
+            </div>
+            <div class="fr">
+                {{user.detail api.currentUser}}
+            </div>
+        </div>
+    {{/user-select}}
+</section>

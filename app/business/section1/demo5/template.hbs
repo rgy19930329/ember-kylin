@@ -1,0 +1,13 @@
+<h3 class="page-title-s1">demo5 测试 <a href="https://github.com/very-geek/ember-sandbox/tree/004/final">ember-sandbox 004</a></h3>
+
+<section class="section-box section1-demo5">
+    <div class="inline">
+        <h4>1. 使用了 app/initializers/navigations.js</h4>
+        <h4>2. 使用了 app/services/navigation.js</h4>
+    </div>
+    <div class="inline">
+        <button type="button" onclick={{action navigation.show navigation}} disabled={{navigation.isShown}}>显示菜单</button>
+        <button type="button" onclick={{action navigation.hide navigation}} disabled={{not navigation.isShown}}>隐藏菜单</button>
+        <button type="button" onclick={{action navigation.toggle navigation}}>切换菜单</button>
+    </div>
+</section>

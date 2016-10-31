@@ -1,0 +1,17 @@
+<h3 class="page-title-s1">demo3 测试 项目初始化模块 initializers 的使用</h3>
+
+<section class="section-box">
+    <h4>使用了 app/initializers/init.js</h4>
+    <div class="">
+        <textarea rows="8">
+    export function initialize() {
+      document.body.classList = 'standard';
+      console.log('使用了 app/initializers/init.js');
+    }
+
+    export default { name: 'init', initialize };
+        </textarea>
+    </div>
+    <br>
+    <h4>tip: 各种需要在项目初始化执行的操作都可以在 app/initializers/ 目录下新建一个js文件，按照以上的格式来写代码。</h4>
+</section>

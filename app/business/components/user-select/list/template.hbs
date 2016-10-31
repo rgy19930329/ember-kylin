@@ -1,0 +1,6 @@
+{{#if api.currentUser}}
+    <li><button class="reset" {{action api.clearUser}}>reset</button></li>
+{{/if}}
+{{#each api.users as |user|}}
+    <li><a href="javascript:;" {{action api.selectUser user}}>{{user.login}}</a></li>
+{{/each}}

@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    routeName: 'section1.demo2',
-    listUrl: '',
 
     users: [
         { login: 'mojombo', avatar_url: 'https://avatars.githubusercontent.com/u/1?v=3' },

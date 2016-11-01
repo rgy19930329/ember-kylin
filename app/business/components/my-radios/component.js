@@ -5,9 +5,11 @@ export default Ember.Component.extend({
 	tagName: 'div',
     classNames: ['my-radios'],
 	content: [],
+	inputName: '',
+	optionValuePath: '',
+    optionLabelPath: '',
 	value: '',
 	name: '',
-	inputName: '',
 
     @on('init')
     domInserted() {
@@ -17,25 +19,10 @@ export default Ember.Component.extend({
         }
     },
 
-	@computed('value')
-	listenValue(){
-		let value = this.get('value');
-		console.log(value);
-	},
-
-    didInsertElement() {
-        // var _this = this;
-        // $('.my-radios').on('click', 'label', function(){
-        //     var $tar = $(this).find('input');
-        //     var index = $(this).index();
-        //     console.log(index);
-        // });
-    },
-
     actions: {
         select(index) {
-            let value = this.get('content')[index].val,
-                name = this.get('content')[index].name;
+            let value = this.get('content')[index][this.get('optionValuePath')],
+                name = this.get('content')[index][this.get('optionLabelPath')];
             this.set('value', value);
             this.set('name', name);
         }

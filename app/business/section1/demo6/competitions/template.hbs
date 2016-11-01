@@ -1,0 +1,8 @@
+<section class="section-box">
+    {{#if model}}
+        <h3>{{model.caption}} - {{model.league}}</h3>
+        {{#each model.teams as |item|}}
+            <img src="{{item.logoUrl}}" width="200" height="200" />
+        {{/each}}
+    {{/if}}
+</section>

@@ -6,6 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.route('index');
     this.route('demos', {}, function() {
         this.route('demo1'); // 数据遍历 + if + helper (add-one)
         this.route('demo2'); // actions 添加事件
@@ -25,6 +26,7 @@ Router.map(function() {
         this.route('demo6', {}, function() {
             this.route('competitions', { 'path': 'competitions/:id' });
         }); // Ember-data
+        this.route('demo7'); // 单、双向数据绑定演示
     });
 });
 

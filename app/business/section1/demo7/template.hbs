@@ -1,0 +1,33 @@
+<h3 class="page-title-s1">demo7 测试 数据单、双向绑定 / <a href="http://www.bilibili.com/video/av6584546/">demo出处</a></h3>
+
+<section class="section-box section1-demo7">
+
+    <h4>model在父级容器中的值：{{model}}</h4>
+    <div>
+        <button {{action "change"}} class="btn">change in father</button>
+    </div>
+    <hr>
+
+    <h3>默认双向绑定（父子之间相互影响）</h3>
+    {{data-binding model=model}}
+    <hr>
+
+    <h3>单向绑定（父影响子，子不影响父）</h3>
+    {{data-binding model=(readonly model)}}
+    <hr>
+
+    <h3>单向绑定情况下实现双向绑定的效果（父子之间相互影响）</h3>
+    {{!-- 用mchange将父级定义的change这个method传递到子组件（闭包） --}}
+    {{data-binding2 model=(readonly model) mchange=(action "change")}}
+    <hr>
+
+    <h3>解绑（类似于复制，父对子的影响仅限于初始化、或者说第一次）</h3>
+    {{data-binding model=(unbound model)}}
+    <hr>
+
+    <h3>在组件中使用positionalParams时默认传值的方式是单向绑定</h3>
+    {{data-binding3 model}}
+    <h3>如果使用positionalParams的同时还想使用双向绑定，则需要使用(mut)</h3>
+    {{data-binding3 (mut model)}}
+
+</section>

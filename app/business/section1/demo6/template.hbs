@@ -1,0 +1,17 @@
+<h3 class="page-title-s1">demo6 测试 Ember-data / <a href="http://www.bilibili.com/video/av6423639/">demo出处</a></h3>
+
+<section class="section-box section1-demo6">
+    <ul>
+        {{#each model as |competition|}}
+            <li>
+                {{#link-to "section1.demo6.competitions" competition}}
+                    {{competition.caption}}
+                {{/link-to}}
+            </li>
+        {{/each}}
+    </ul>
+</section>
+
+<hr>
+
+{{outlet}}

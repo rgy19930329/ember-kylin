@@ -5,10 +5,10 @@ export default Ember.Route.extend({
     listUrl: '',
 
     list: [
-        { val: '1', name: '影视' },
-        { val: '2', name: '艺术' },
-        { val: '3', name: '剧目' },
-        { val: '4', name: '其它' }
+        { valx: '1', fname: '影视' },
+        { valx: '2', fname: '艺术' },
+        { valx: '3', fname: '剧目' },
+        { valx: '4', fname: '其它' }
     ],
 
     curr: { val: '3', name: '剧目' },

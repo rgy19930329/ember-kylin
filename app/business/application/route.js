@@ -16,6 +16,6 @@ export default Ember.Route.extend({
     renderTemplate() {
       this._super(...arguments);
       this.render('application/navigation', { into: 'application', outlet: 'navigation' });
-    }
-
+    },
+    
 });

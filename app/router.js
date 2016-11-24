@@ -23,6 +23,9 @@ Router.map(function() {
         this.route('demo4');
         this.route('demo5');
     });
+    this.route('section2', {}, function() {
+        this.route('demo1');
+    });
 });
 
 export default Router;

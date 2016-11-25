@@ -4,7 +4,7 @@ import computed from 'ember-computed-decorators';
 export default Ember.Controller.extend({
 	actions: {
 		press(val) {
-			console.log(val);
+			alert(JSON.stringify(val));
 		}
 	}
 });

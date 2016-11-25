@@ -28,8 +28,8 @@ Router.map(function() {
         }); // Ember-data
         this.route('demo7'); // 单、双向数据绑定演示
     });
-    this.route('section2', {}, function() {
-        this.route('demo1');
+    this.route('section2', { 'path': 'ember-addon' }, function() {
+        this.route('demo1', { 'path': 'ember-my-radios' });
     });
 });
 

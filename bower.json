@@ -6,6 +6,7 @@
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "bootstrap": "*",
-    "remodal": "1.1.0"
+    "remodal": "1.1.0",
+    "highlightjs": "^9.8.0"
   }
 }

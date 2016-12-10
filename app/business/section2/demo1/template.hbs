@@ -1,15 +1,15 @@
 <h3 class="page-title-s1">ember-my-radios</h3>
 
 <section class="section-box">
-    {{my-radios
-        content=model.list
-        optionValuePath="valx"
-        optionLabelPath="fname"
-        value=model.curr.val
-        name=model.curr.name
-    }}
-    <h4>
-        {{model.curr.val}} - {{model.curr.name}}
-    </h4>
-    <button {{action "press" model.curr}} class="btn btn-default">press</button>
+  {{my-radios
+    content=model.list
+    optionValuePath="valx"
+    optionLabelPath="fname"
+    value=model.curr.val
+    name=model.curr.name
+  }}
+  <h4>
+    {{model.curr.val}} - {{model.curr.name}}
+  </h4>
+  <button {{action "press" model.curr}} class="btn btn-default">press</button>
 </section>

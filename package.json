@@ -36,6 +36,7 @@
     "ember-computed-decorators": "0.2.2",
     "ember-data": "^2.6.0",
     "ember-export-application-global": "^1.0.5",
+    "ember-highlight-code": "0.0.8",
     "ember-load-initializers": "^0.5.1",
     "ember-my-radios": "0.0.2",
     "ember-remodal": "2.0.0",
@@ -43,5 +44,6 @@
     "ember-welcome-page": "^1.0.1",
     "liquid-fire": "0.26.1",
     "loader.js": "^4.0.1"
-  }
+  },
+  "dependencies": {}
 }
